@@ -79,8 +79,7 @@ export default function Projects() {
     {
       id: 6,
       title: "Blood Bank",
-      description:
-        "A recipe application with search functionality, filtering, and user favorites.",
+      description: "Blood bank inventory system",
       image: "/placeholder.svg?height=400&width=600",
       tags: ["React", "Springboot", "Reactstrap"],
       category: "web",
