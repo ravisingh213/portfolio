@@ -56,6 +56,8 @@ export default function Contact() {
 
       console.log("Email sent successfully:", result.text);
 
+      alert("Message sent successfully! Thank you for your message. I'll get back to you soon.");
+      
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",

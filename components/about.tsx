@@ -15,7 +15,7 @@ export default function About() {
       "JavaScript",
       "HTML",
       "CSS",
-      "Bootstrap CSS"
+      "Bootstrap CSS",
     ],
     backend: [
       "Node.js",
@@ -35,7 +35,6 @@ export default function About() {
       "Webpack",
       "Jest",
       "React Testing Library",
-      
     ],
   };
 
@@ -65,7 +64,8 @@ export default function About() {
       year: "2018",
       title: "Information Technology Degree",
       company: "RGPV Bhopal University",
-      description: "Graduated with a Bachelor's degree in Information Technology.",
+      description:
+        "Graduated with a Bachelor's degree in Information Technology.",
     },
   ];
 
@@ -88,10 +88,10 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-8"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I'm a passionate Full Stack developer with a strong focus on creating
-            intuitive and performant user interfaces. With several years of
-            experience in web development, I enjoy turning complex problems into
-            simple, beautiful solutions.
+            I'm a passionate Full Stack developer with a strong focus on
+            creating intuitive and performant user interfaces. With several
+            years of experience in web development, I enjoy turning complex
+            problems into simple, beautiful solutions.
           </p>
         </motion.div>
 
@@ -204,29 +204,39 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  } md:flex-row-reverse`}
+                  className="relative flex items-center"
                 >
-                  <div className="flex-1 md:pr-10 md:pl-0 pl-10">
-                    <Card>
-                      <CardContent className="p-10">
-                        <div className="font-bold text-lg">{item.title}</div>
-                        <div className="text-primary font-medium">
-                          {item.company}
-                        </div>
-                        <div className="text-muted-foreground mt-2">
-                          {item.description}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                    <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold">
-                      {item.year.slice(-2)}
-                    </div>
-                  </div>
-                  <div className="flex-1"></div>
+                  {index % 2 === 0 ? (
+                    <>
+                      <div className="flex-1 pr-8">
+                        <Card>
+                          <CardContent className="p-6">
+                            <div className="text-sm text-primary font-semibold mb-1">{item.year}</div>
+                            <div className="font-bold text-lg mb-1">{item.title}</div>
+                            <div className="text-primary font-medium mb-2">{item.company}</div>
+                            <div className="text-muted-foreground">{item.description}</div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10"></div>
+                      <div className="flex-1"></div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="flex-1"></div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10"></div>
+                      <div className="flex-1 pl-8">
+                        <Card>
+                          <CardContent className="p-6">
+                            <div className="text-sm text-primary font-semibold mb-1">{item.year}</div>
+                            <div className="font-bold text-lg mb-1">{item.title}</div>
+                            <div className="text-primary font-medium mb-2">{item.company}</div>
+                            <div className="text-muted-foreground">{item.description}</div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </>
+                  )}
                 </motion.div>
               ))}
             </div>
