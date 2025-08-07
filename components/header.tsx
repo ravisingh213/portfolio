@@ -67,7 +67,7 @@ export default function Header() {
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </Button>
           <Button asChild>
-            <Link href="/ravisinghresume1.pdf" target="_blank">
+            <Link href="/ravisinghresume2.pdf" target="_blank">
               Resume
             </Link>
           </Button>
