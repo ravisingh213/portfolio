@@ -69,7 +69,7 @@ export default function Hero() {
               <Link href="#contact">Contact Me</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/ravisinghresume1.pdf" target="_blank">
+              <Link href="/ravisinghresume2.pdf" target="_blank">
                 Download Resume
               </Link>
             </Button>
